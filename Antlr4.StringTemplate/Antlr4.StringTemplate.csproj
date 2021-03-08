@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <Description>The C# port of StringTemplate 4.</Description>
+    <Version>$(STVersion)</Version>
+    <FileVersion>$(STFileVersion)</FileVersion>
+    <InformationalVersion>$(STInformationalVersion)</InformationalVersion>
+
+    <Title>StringTemplate 4</Title>
+    <PackageId>StringTemplate4</PackageId>
+    <PackageTags>stringtemplate st4 stringtemplate4 template</PackageTags>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <Target Name="DisableCrazyPackageDeletion" BeforeTargets="Clean">
+    <PropertyGroup>
+      <GeneratePackageValue>$(GeneratePackageOnBuild)</GeneratePackageValue>
+      <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    </PropertyGroup>
+  </Target>
+  <Target Name="EnablePackageGeneration" Condition="'$(GeneratePackageValue)' != ''" BeforeTargets="Build">
+    <PropertyGroup>
+      <GeneratePackageOnBuild>$(GeneratePackageValue)</GeneratePackageOnBuild>
+    </PropertyGroup>
+  </Target>
+
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <PropertyGroup>
+        <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+      </PropertyGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Runtime\Antlr3.Runtime\Antlr3.Runtime.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Debug\DebugTemplate.cs" />
+    <Compile Remove="Debug\DebugTemplate.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Compiler\CodeGenerator.g3.cs">
+      <DependentUpon>CodeGenerator.g3</DependentUpon>
+    </Compile>
+    <Compile Update="Compiler\Group.g3.parser.cs">
+      <DependentUpon>Group.g3</DependentUpon>
+    </Compile>
+    <Compile Update="Compiler\Group.g3.lexer.cs">
+      <DependentUpon>Group.g3</DependentUpon>
+    </Compile>
+    <Compile Update="Compiler\TemplateParser.g3.cs">
+      <DependentUpon>TemplateParser.g3</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

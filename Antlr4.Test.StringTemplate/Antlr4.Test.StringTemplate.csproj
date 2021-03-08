@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <Description>The C# port of StringTemplate 4</Description>
+    <Company>Tunnel Vision Laboratories, LLC</Company>
+    <Copyright>Copyright © Sam Harwell 2011</Copyright>
+    <Version>$(STVersion)</Version>
+    <FileVersion>$(STFileVersion)</FileVersion>
+    <InformationalVersion>$(STInformationalVersion)</InformationalVersion>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(TargetFramework)' == 'netcoreapp2.0'">
+      <PropertyGroup>
+        <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(TargetFramework)' == 'net45'">
+      <ItemGroup>
+        <ProjectReference Include="..\Antlr4.StringTemplate.Visualizer\Antlr4.StringTemplate.Visualizer.csproj" />
+      </ItemGroup>
+    </When>
+  </Choose>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Runtime\Antlr3.Runtime\Antlr3.Runtime.csproj" />
+    <ProjectReference Include="..\Antlr4.StringTemplate\Antlr4.StringTemplate.csproj" />
+  </ItemGroup>
+
+</Project>

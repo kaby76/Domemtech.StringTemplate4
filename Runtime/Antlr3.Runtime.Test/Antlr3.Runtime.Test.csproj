@@ -1,0 +1,145 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+
+    <EnableDefaultAntlrItems>false</EnableDefaultAntlrItems>
+
+    <Description>The C# port of ANTLR 3</Description>
+    <Company>Tunnel Vision Laboratories, LLC</Company>
+    <Copyright>Copyright © Sam Harwell 2011</Copyright>
+    <Version>$(ANTLRVersion)</Version>
+    <FileVersion>$(ANTLRFileVersion)</FileVersion>
+    <InformationalVersion>$(ANTLRInformationalVersion)</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Antlr3.StringTemplate\Antlr3.StringTemplate.csproj" />
+    <ProjectReference Include="..\Antlr3.Runtime.Debug\Antlr3.Runtime.Debug.csproj" />
+    <ProjectReference Include="..\Antlr3.Runtime.JavaExtensions\Antlr3.Runtime.JavaExtensions.csproj" />
+    <ProjectReference Include="..\Antlr3.Runtime\Antlr3.Runtime.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Antlr3 Include="SimpleExpression.g3" />
+    <Antlr3 Include="FastSimpleExpression.g3" />
+    <None Include="JavaCompat\Expr.g3" />
+    <Antlr3 Include="BuildOptions\DebugGrammar.g3">
+      <!--<GrammarOptions>-debug</GrammarOptions>-->
+    </Antlr3>
+    <Antlr3 Include="BuildOptions\DebugTreeGrammar.g3">
+      <!--<GrammarOptions>-debug</GrammarOptions>-->
+    </Antlr3>
+    <Antlr3 Include="StringTemplateOutput.g3" />
+    <Antlr3 Include="TestActionFeatures.g3" />
+    <Antlr3 Include="SemanticPredicateReduction.g3" />
+    <Antlr3 Include="Composition\Reduce.g3" />
+    <Antlr3 Include="Composition\Simplify.g3" />
+    <Antlr3 Include="Composition\VecMath.g3" />
+    <AntlrAbstractGrammar Include="Composition\VecMath_Lexer.g3">
+      <Generator>MSBuild:Compile</Generator>
+    </AntlrAbstractGrammar>
+    <AntlrAbstractGrammar Include="Composition\VecMath_Parser.g3">
+      <Generator>MSBuild:Compile</Generator>
+    </AntlrAbstractGrammar>
+    <Antlr3 Include="PreprocessorLexer.g3" />
+    <Antlr3 Include="SynpredTreeParser.g3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BuildOptions\DebugGrammarLexer.cs" />
+    <Compile Remove="BuildOptions\DebugGrammarParser.cs" />
+    <Compile Remove="BuildOptions\DebugTreeGrammar.cs" />
+    <Compile Remove="BuildOptions\ProfileGrammarLexer.cs" />
+    <Compile Remove="BuildOptions\ProfileGrammarParser.cs" />
+    <Compile Remove="BuildOptions\ProfileTreeGrammar.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PreprocessorLexer.g3.cs">
+      <DependentUpon>PreprocessorLexer.g3</DependentUpon>
+    </Compile>
+    <Compile Update="SemanticPredicateReduction.g3.lexer.cs">
+      <DependentUpon>SemanticPredicateReduction.g3</DependentUpon>
+    </Compile>
+    <Compile Update="SemanticPredicateReduction.g3.parser.cs">
+      <DependentUpon>SemanticPredicateReduction.g3</DependentUpon>
+    </Compile>
+    <Compile Update="SimpleExpressionLexerHelper.cs">
+      <DependentUpon>SimpleExpression.g3</DependentUpon>
+    </Compile>
+    <Compile Update="SimpleExpressionParserHelper.cs">
+      <DependentUpon>SimpleExpression.g3</DependentUpon>
+    </Compile>
+    <Compile Update="FastSimpleExpressionLexerHelper.cs">
+      <DependentUpon>FastSimpleExpression.g3</DependentUpon>
+    </Compile>
+    <Compile Update="FastSimpleExpressionParserHelper.cs">
+      <DependentUpon>FastSimpleExpression.g3</DependentUpon>
+    </Compile>
+    <Compile Update="BuildOptions\DebugGrammarLexerHelper.cs">
+      <DependentUpon>DebugGrammar.g3</DependentUpon>
+    </Compile>
+    <Compile Update="BuildOptions\DebugGrammarParserHelper.cs">
+      <DependentUpon>DebugGrammar.g3</DependentUpon>
+    </Compile>
+    <Compile Update="BuildOptions\DebugTreeGrammarHelper.cs">
+      <DependentUpon>DebugTreeGrammar.g3</DependentUpon>
+    </Compile>
+    <Compile Update="StringTemplateOutput.g3.lexer.cs">
+      <DependentUpon>StringTemplateOutput.g3</DependentUpon>
+    </Compile>
+    <Compile Update="StringTemplateOutput.g3.parser.cs">
+      <DependentUpon>StringTemplateOutput.g3</DependentUpon>
+    </Compile>
+    <Compile Update="SynpredTreeParser.g3.cs">
+      <DependentUpon>SynpredTreeParser.g3</DependentUpon>
+    </Compile>
+    <Compile Update="TestActionFeatures.g3.lexer.cs">
+      <DependentUpon>TestActionFeatures.g3</DependentUpon>
+    </Compile>
+    <Compile Update="TestActionFeatures.g3.parser.cs">
+      <DependentUpon>TestActionFeatures.g3</DependentUpon>
+    </Compile>
+    <Compile Update="TestExpressionFeatures.g3.lexer.cs">
+      <DependentUpon>TestExpressionFeatures.g3</DependentUpon>
+    </Compile>
+    <Compile Update="TestExpressionFeatures.g3.parser.cs">
+      <DependentUpon>TestExpressionFeatures.g3</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BuildOptions\ProfileGrammar.g3">
+      <!--<GrammarOptions>-profile</GrammarOptions>-->
+    </None>
+    <None Include="BuildOptions\ProfileGrammarLexerHelper.cs">
+      <DependentUpon>ProfileGrammar.g3</DependentUpon>
+    </None>
+    <None Include="BuildOptions\ProfileGrammarParserHelper.cs">
+      <DependentUpon>ProfileGrammar.g3</DependentUpon>
+    </None>
+    <None Include="TestExpressionFeatures.g3" />
+
+    <Compile Remove="BuildOptions\ProfileGrammarLexerHelper.cs" />
+    <Compile Remove="BuildOptions\ProfileGrammarParserHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BuildOptions\ProfileTreeGrammar.g3">
+      <!--<GrammarOptions>-profile</GrammarOptions>-->
+    </None>
+    <None Include="BuildOptions\ProfileTreeGrammarHelper.cs">
+      <DependentUpon>ProfileTreeGrammar.g3</DependentUpon>
+    </None>
+
+    <Compile Remove="BuildOptions\ProfileTreeGrammarHelper.cs" />
+  </ItemGroup>
+
+</Project>

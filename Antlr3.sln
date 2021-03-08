@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 15.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0B451C4-EAFC-4942-B18E-49EC73DABABD}"
+	ProjectSection(SolutionItems) = preProject
+		.travis.yml = .travis.yml
+		Antlr3.ruleset = Antlr3.ruleset
+		Antlr3.vsmdi = Antlr3.vsmdi
+		AntlrTestConfig.testrunconfig = AntlrTestConfig.testrunconfig
+		appveyor.yml = appveyor.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr3.Runtime", "Runtime\Antlr3.Runtime\Antlr3.Runtime.csproj", "{8FDC0A87-9005-4D5A-AB75-E55CEB575559}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr3.Runtime.JavaExtensions", "Runtime\Antlr3.Runtime.JavaExtensions\Antlr3.Runtime.JavaExtensions.csproj", "{A7EEC557-EB14-451C-9616-B7A61F4ECE69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr4.StringTemplate", "Antlr4.StringTemplate\Antlr4.StringTemplate.csproj", "{DE9B7DA2-35DD-46CC-B768-DAEE3C298660}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr4.Test.StringTemplate", "Antlr4.Test.StringTemplate\Antlr4.Test.StringTemplate.csproj", "{1B70CBF4-B592-4A9C-B7B3-AD1A087F4B9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{D2D979DC-1305-4C44-B21A-9EB3EEE95F7B}"
+	ProjectSection(SolutionItems) = preProject
+		build\prep\Antlr3.CodeGenerator.nuspec = build\prep\Antlr3.CodeGenerator.nuspec
+		build\prep\Antlr3.nuspec = build\prep\Antlr3.nuspec
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		build\prep\prepare.ps1 = build\prep\prepare.ps1
+		build\prep\push-antlr.ps1 = build\prep\push-antlr.ps1
+		build\prep\push-st3.ps1 = build\prep\push-st3.ps1
+		build\prep\push-st4.ps1 = build\prep\push-st4.ps1
+		build\prep\StringTemplate4.Visualizer.nuspec = build\prep\StringTemplate4.Visualizer.nuspec
+		build\prep\version.ps1 = build\prep\version.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FDC0A87-9005-4D5A-AB75-E55CEB575559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDC0A87-9005-4D5A-AB75-E55CEB575559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDC0A87-9005-4D5A-AB75-E55CEB575559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDC0A87-9005-4D5A-AB75-E55CEB575559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7EEC557-EB14-451C-9616-B7A61F4ECE69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EEC557-EB14-451C-9616-B7A61F4ECE69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EEC557-EB14-451C-9616-B7A61F4ECE69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EEC557-EB14-451C-9616-B7A61F4ECE69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9B7DA2-35DD-46CC-B768-DAEE3C298660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9B7DA2-35DD-46CC-B768-DAEE3C298660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9B7DA2-35DD-46CC-B768-DAEE3C298660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9B7DA2-35DD-46CC-B768-DAEE3C298660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B70CBF4-B592-4A9C-B7B3-AD1A087F4B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B70CBF4-B592-4A9C-B7B3-AD1A087F4B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B70CBF4-B592-4A9C-B7B3-AD1A087F4B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B70CBF4-B592-4A9C-B7B3-AD1A087F4B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D2D979DC-1305-4C44-B21A-9EB3EEE95F7B} = {C0B451C4-EAFC-4942-B18E-49EC73DABABD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46CE14C6-8A1E-4634-A720-69B2E14873EE}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Antlr3.vsmdi
+	EndGlobalSection
+EndGlobal
