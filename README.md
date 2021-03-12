@@ -1,28 +1,20 @@
-# ANTLR 3 C# Target
+# Antlr4 StringTemplates Library
 
-[![Join the chat at https://gitter.im/antlr/antlrcs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/antlr/antlrcs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+This is a fork of the C# String Template repo. The old repo [here](https://github.com/antlr/antlrcs)
+has not been maintained for years, doesn't build with the
+Net5 SDK or VS2019. Since I only need to use StringTemplate4,
+I removed all but the essentials--which you can see it just a huge
+ton of junk.
 
-| Platform | Build Status |
-| --- | --- |
-| Windows | [![Build status](https://ci.appveyor.com/api/projects/status/x21gyx4ikxsa9n3t/branch/master?svg=true)](https://ci.appveyor.com/project/sharwell/antlrcs/branch/master) |
-| Linux | [![Build status](https://travis-ci.org/antlr/antlrcs.svg?branch=master)](https://travis-ci.org/antlr/antlrcs) |
-
-This repository contains C# versions of 3 major projects, some of which have multiple build artifacts:
-
-* ANTLR 3
-  * [Antlr3](https://www.nuget.org/packages/Antlr3): Code generator for ANTLR 3
-  * [Antlr3.Runtime](https://www.nuget.org/packages/Antlr3.Runtime): Runtime library for ANTLR 3
-  * [Antlr3.Runtime.Debug](https://www.nuget.org/packages/Antlr3.Runtime.Debug): Runtime library debugging tools for ANTLR 3
-* StringTemplate 3
-  * [StringTemplate3](https://www.nuget.org/packages/StringTemplate3): Runtime library
-* StringTemplate 4
-  * [StringTemplate4](https://www.nuget.org/packages/StringTemplate4): Runtime library
-  * [StringTemplate4.Visualizer](https://www.nuget.org/packages/StringTemplate4.Visualizer): WPF visualizer for rendering StringTemplate 4 templates
+This library is a "netstandard2.0" library. All old targets are useless.
+With Net5, this builds everywhere, works everywhere.
 
 ## Documentation
 
-The following pages provide documentation for this project:
+Refer to the [StringTemplate Home](http://www.stringtemplate.org/) for
+instructions on how to use. Note, the API is--of course--completely renamed.
+Why would it be any other way?
 
-* [Visual Studio and the ANTLR C# Target](doc/README.md)
-* [ANTLR v3 Home](http://www.antlr3.org)
-* [StringTemplate Home](http://www.stringtemplate.org/)
+
+Ken Domino
+March 12, 2021
