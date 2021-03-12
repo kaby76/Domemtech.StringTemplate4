@@ -45,4 +45,8 @@
     </Compile>
   </ItemGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>3021;1701;1702;1591;3001;3002;3003;3009;0436</NoWarn>
+  </PropertyGroup>
+
 </Project>
