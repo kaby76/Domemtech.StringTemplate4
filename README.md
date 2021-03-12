@@ -1,4 +1,4 @@
-# Antlr4 StringTemplates Library
+# Antlr4 StringTemplates for C# Library
 
 This is a fork of the C# String Template repo. The old repo [here](https://github.com/antlr/antlrcs)
 has not been maintained for years, doesn't build with the
