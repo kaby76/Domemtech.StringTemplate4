@@ -11,9 +11,9 @@
     <PackageId>Domemtech.StringTemplate4</PackageId>
     <PackageTags>stringtemplate st4 stringtemplate4 template</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/kaby76/Globbing/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/kaby76/Globbing</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/kaby76/Globbing</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/kaby76/stringtemplate4cs/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/kaby76/stringtemplate4cs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kaby76/stringtemplate4cs</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 

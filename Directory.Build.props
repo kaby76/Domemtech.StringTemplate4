@@ -31,15 +31,6 @@
 
   <PropertyGroup>
     <!-- Default NuGet package properties. Additional items set in Directory.Build.targets. -->
-    <Company>Tunnel Vision Laboratories, LLC</Company>
-    <Copyright>Copyright © Sam Harwell 2011</Copyright>
-    <Authors>Sam Harwell, Terence Parr</Authors>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/antlr/antlrcs/master/LICENSE.txt</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/antlr/antlrcs</PackageProjectUrl>
-    <PackageIconUrl>https://raw.github.com/antlr/website-antlr4/master/images/icons/antlr.png</PackageIconUrl>
-    <PackageReleaseNotes>https://github.com/antlr/antlrcs/releases/$(ANTLRInformationalVersion)</PackageReleaseNotes>
-
     <IncludeSymbols>true</IncludeSymbols>
     <IncludeSource>true</IncludeSource>
     <PackageOutputPath>$(MSBuildThisFileDirectory)build\prep\nuget\</PackageOutputPath>
