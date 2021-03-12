@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Debug\DebugTemplate.cs" />
-    <Compile Remove="Debug\DebugTemplate.cs" />
+    <None Include="Dbg\DebugTemplate.cs" />
+    <Compile Remove="Dbg\DebugTemplate.cs" />
   </ItemGroup>
 
   <ItemGroup>
