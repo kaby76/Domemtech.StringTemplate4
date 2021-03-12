@@ -8,7 +8,7 @@
     <Title>StringTemplate 4</Title>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Ken Domino</Authors>
-    <PackageId>StringTemplate4</PackageId>
+    <PackageId>Domemtech.StringTemplate4</PackageId>
     <PackageTags>stringtemplate st4 stringtemplate4 template</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/kaby76/Globbing/LICENSE</PackageLicenseUrl>
