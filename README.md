@@ -12,7 +12,9 @@ With Net5, this builds everywhere, works everywhere.
 ## Documentation
 
 Refer to the [StringTemplate Home](http://www.stringtemplate.org/) for
-instructions on how to use. Note, the API is--of course--completely renamed.
+instructions on how to use. Note, the API classes and methods differ from
+the doc. E.g., [ST in Java](https://github.com/antlr/stringtemplate4/blob/master/src/org/stringtemplate/v4/ST.java)
+is [Template in C#](https://github.com/kaby76/stringtemplate4cs/blob/main/Antlr4.StringTemplate/Template.cs).
 Why would it be any other way?
 
 
