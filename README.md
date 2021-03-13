@@ -10,6 +10,12 @@ are required by Antlr4.StringTemplate.
 This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
 I have uploaded it to NuGet: [Domemtech.StringTemplate4](https://www.nuget.org/packages/Domemtech.StringTemplate4/).
 
+## History
+
+As far as I can tell, the start of changes in StringTemplate4 for Java that wasn't applied to the
+C# version was [this commit](https://github.com/antlr/stringtemplate4/commit/452e4015dbe8ddc35d251f344eee1177dabe69ac#diff-54c975bce4cd656ceab1946ed8471b2efeaf7c66d84f6556adfeb475b8b4ef25). That puts the code divergence since
+at least July 16, 2016. 
+
 ## Documentation
 
 Refer to the [StringTemplate Home](http://www.stringtemplate.org/) for
