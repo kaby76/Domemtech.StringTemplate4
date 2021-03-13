@@ -2,12 +2,12 @@
 
 This is a fork of the C# String Template repo. The old repo [here](https://github.com/antlr/antlrcs)
 has not been maintained for years, doesn't build with the
-Net5 SDK or VS2019. Since I only need to use StringTemplate4,
-I removed all but the essentials--which you can see it just a huge
-ton of junk.
+Net5 SDK or VS2019. Since I only need to use StringTemplate4, and not the rest of
+the software in the repo, I removed all but the essentials for StringTemplate, which you can see
+is a ton of unnecessary stuff. It now includes only Antlr4.StringTemplate. Antlr3.Runtime and AntlrBuildTasks
+are required by Antlr4.StringTemplate.
 
-This library is a "netstandard2.0" library. All old targets are useless.
-With Net5, this builds everywhere, works everywhere.
+This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
 
 ## Documentation
 
