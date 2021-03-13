@@ -8,6 +8,7 @@ is a ton of unnecessary stuff. It now includes only Antlr4.StringTemplate. Antlr
 are required by Antlr4.StringTemplate.
 
 This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
+I have uploaded it to NuGet: [Domemtech.StringTemplate4](https://www.nuget.org/packages/Domemtech.StringTemplate4/).
 
 ## Documentation
 
