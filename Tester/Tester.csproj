@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Antlr3.Runtime\Antlr3.Runtime.csproj" />
+    <ProjectReference Include="..\Antlr4.StringTemplate\Antlr4.StringTemplate.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version ="4.9.2" />
+  </ItemGroup>
+
+</Project>

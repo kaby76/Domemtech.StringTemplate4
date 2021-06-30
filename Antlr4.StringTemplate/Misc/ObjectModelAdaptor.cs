@@ -57,6 +57,10 @@ namespace Antlr4.StringTemplate.Misc
             if (property == null)
                 throw new TemplateNoSuchPropertyException(o, string.Format("{0}.{1}", c.FullName, propertyName ?? "null"));
 
+            if (c.BaseType.FullName == "Antlr4.Runtime.ParserRuleContext")
+            {
+            }
+
             object value;
             var accessor = FindMember(c, propertyName);
             if (accessor != null)
@@ -121,6 +125,11 @@ namespace Antlr4.StringTemplate.Misc
                     method = type.GetMethod("get_" + methodSuffix, Type.EmptyTypes);
                     if (method == null && checkOriginalName)
                         method = type.GetMethod("get_" + name, Type.EmptyTypes);
+                }
+
+                if (method == null)
+                {
+                    method = type.GetMethod(name, Type.EmptyTypes);
                 }
 
                 if (method != null)
