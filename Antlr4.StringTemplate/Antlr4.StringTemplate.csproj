@@ -3,15 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>The C# port of StringTemplate 4.</Description>
-    <Version>4.0.10</Version>
-    <FileVersion>4.0.10</FileVersion>
+    <Version>4.1.0</Version>
+    <FileVersion>4.1.0</FileVersion>
     <Title>StringTemplate 4</Title>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Ken Domino</Authors>
     <PackageId>Domemtech.StringTemplate4</PackageId>
     <PackageTags>stringtemplate st4 stringtemplate4 template</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/kaby76/stringtemplate4cs/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/kaby76/stringtemplate4cs</PackageProjectUrl>
     <RepositoryUrl>https://github.com/kaby76/stringtemplate4cs</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>

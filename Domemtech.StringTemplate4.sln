@@ -6,8 +6,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr3.Runtime", "Antlr3.Ru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr4.StringTemplate", "Antlr4.StringTemplate\Antlr4.StringTemplate.csproj", "{D135BB28-05B1-44BD-9109-B9EE97CD3D5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{6F720A70-EF0E-4D1E-BF3B-37D22F85CF52}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
