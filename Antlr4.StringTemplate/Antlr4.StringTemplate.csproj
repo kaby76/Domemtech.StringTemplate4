@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>The C# port of StringTemplate 4.</Description>
-    <Version>4.1.0</Version>
-    <FileVersion>4.1.0</FileVersion>
+    <Version>4.2.0</Version>
+    <FileVersion>4.2.0</FileVersion>
     <Title>StringTemplate 4</Title>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Ken Domino</Authors>
@@ -28,21 +28,6 @@
   <ItemGroup>
     <None Include="Dbg\DebugTemplate.cs" />
     <Compile Remove="Dbg\DebugTemplate.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Compiler\CodeGenerator.g3.cs">
-      <DependentUpon>CodeGenerator.g3</DependentUpon>
-    </Compile>
-    <Compile Update="Compiler\Group.g3.parser.cs">
-      <DependentUpon>Group.g3</DependentUpon>
-    </Compile>
-    <Compile Update="Compiler\Group.g3.lexer.cs">
-      <DependentUpon>Group.g3</DependentUpon>
-    </Compile>
-    <Compile Update="Compiler\TemplateParser.g3.cs">
-      <DependentUpon>TemplateParser.g3</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
