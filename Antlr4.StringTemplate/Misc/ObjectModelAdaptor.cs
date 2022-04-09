@@ -54,12 +54,14 @@ namespace Antlr4.StringTemplate.Misc
                 throw new ArgumentNullException("o");
 
             Type c = o.GetType();
+            if (o is DynamicXml xml)
+            {
+                xml.TryGetMember(new Goof(propertyName, true), out object x3);
+                return x3;
+            }    
+
             if (property == null)
                 throw new TemplateNoSuchPropertyException(o, string.Format("{0}.{1}", c.FullName, propertyName ?? "null"));
-
-            if (c.BaseType.FullName == "Antlr4.Runtime.ParserRuleContext")
-            {
-            }
 
             object value;
             var accessor = FindMember(c, propertyName);

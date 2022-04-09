@@ -2,8 +2,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr3.Runtime", "Antlr3.Runtime\Antlr3.Runtime.csproj", "{0395EF42-5D81-45E0-A913-33B1709CFB01}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Antlr4.StringTemplate", "Antlr4.StringTemplate\Antlr4.StringTemplate.csproj", "{D135BB28-05B1-44BD-9109-B9EE97CD3D5C}"
 EndProject
 Global

@@ -17,13 +17,9 @@
     <RepositoryType>Git</RepositoryType>
   </PropertyGroup>
 
-      <PropertyGroup>
-        <DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
-      </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Antlr3.Runtime\Antlr3.Runtime.csproj" />
-  </ItemGroup>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);PORTABLE;NETSTANDARD</DefineConstants>
+  </PropertyGroup>
 
   <ItemGroup>
     <None Include="Dbg\DebugTemplate.cs" />
