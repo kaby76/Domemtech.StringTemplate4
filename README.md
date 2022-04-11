@@ -2,10 +2,15 @@
 
 This is a fork of the C# String Template repo. The old repo [here](https://github.com/antlr/antlrcs)
 has not been maintained for years, doesn't build with the
-Net5 SDK or VS2019. Since I only need to use StringTemplate4, and not the rest of
-the software in the repo, I removed all but the essentials for StringTemplate, which you can see
-is a ton of unnecessary stuff. It now includes only Antlr4.StringTemplate. Antlr3.Runtime and AntlrBuildTasks
-are required by Antlr4.StringTemplate.
+Net6 SDK or VS2022. Since I only need to use StringTemplate4, and not the rest of
+the software in the repo, I removed all but the essentials for StringTemplate.
+
+* Removed AntlrBuildTasks -- this was used to run the tool and generate parsers for StringTemplate grammars,
+which are in Antlr3. Since AntlrBuildTask is removed, the grammars can no longer be updated. This is planned
+as any further changes ongoing should be with an Antlr4 grammar.
+* Moved Antlr3.Runtime to internal Antlr4.StringTemplate -- this was moved so that there is no external
+dependence on the Antlr3 runtime, and no confusion as to what runtime one is using when this library is
+used.
 
 This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
 I have uploaded it to NuGet: [Domemtech.StringTemplate4](https://www.nuget.org/packages/Domemtech.StringTemplate4/).
