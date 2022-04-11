@@ -11,6 +11,12 @@ as any further changes ongoing should be with an Antlr4 grammar.
 * Moved Antlr3.Runtime to internal Antlr4.StringTemplate -- this was moved so that there is no external
 dependence on the Antlr3 runtime, and no confusion as to what runtime one is using when this library is
 used.
+* Removed Antlr3.Targets -- not needed.
+* Removed Antlr3 -- not needed.
+* Removed Antlr3.Tests -- not needed.
+* Removed Antlr3.StringTemplate -- not needed.
+* Removed Antlr4.StringTemplate.Visualizer -- not needed.
+* Removed build -- not needed.
 
 This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
 I have uploaded it to NuGet: [Domemtech.StringTemplate4](https://www.nuget.org/packages/Domemtech.StringTemplate4/).
