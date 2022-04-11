@@ -17,8 +17,9 @@ used.
 * Removed Antlr3.StringTemplate -- not needed.
 * Removed Antlr4.StringTemplate.Visualizer -- not needed.
 * Removed build -- not needed.
+* Removed doc -- not needed.
 
-This library is a "netstandard2.0" library, which should be compatible with most modern frameworks.
+This library is a "netstandard2.0" library, which should be compatible with up-to-date frameworks.
 I have uploaded it to NuGet: [Domemtech.StringTemplate4](https://www.nuget.org/packages/Domemtech.StringTemplate4/).
 
 ## History
