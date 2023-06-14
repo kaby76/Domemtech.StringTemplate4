@@ -9,6 +9,6 @@ clean: FORCE
 	rm -rf nuget.config
 
 publish:
-	dotnet nuget push Antlr4.StringTemplate/bin/Debug/Domemtech.StringTemplate4.4.2.0.nupkg --api-key ${trashkey} --source https://api.nuget.org/v3/index.json
+	dotnet nuget push Antlr4.StringTemplate/bin/Debug/Domemtech.StringTemplate4.4.3.0.nupkg --api-key ${trashkey} --source https://api.nuget.org/v3/index.json
 
 FORCE: ; 
