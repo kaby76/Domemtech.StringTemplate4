@@ -205,6 +205,14 @@ namespace Antlr4.StringTemplate
             this.groupThatCreatedThisInstance = prototype.groupThatCreatedThisInstance;
         }
 
+        public List<string> FormalArguments
+        {
+            get
+            {
+                return impl.FormalArguments.Select(a => a.Name).ToList();
+            }
+        }
+
         public TemplateDebugState DebugState
         {
             get
@@ -253,8 +261,8 @@ namespace Antlr4.StringTemplate
             lock (this)
             { if (name == null)
                     throw new ArgumentNullException("name");
-                if (name.IndexOf('.') >= 0)
-                    throw new ArgumentException("cannot have '.' in attribute names");
+//                if (name.IndexOf('.') >= 0)
+//                    throw new ArgumentException("cannot have '.' in attribute names");
 
                 if (Group.TrackCreationEvents)
                 {
@@ -264,13 +272,13 @@ namespace Antlr4.StringTemplate
                 }
 
                 FormalArgument arg = null;
-                if (impl.HasFormalArgs)
-                {
-                    arg = impl.TryGetFormalArgument(name);
-                    if (arg == null)
-                        throw new ArgumentException("no such attribute: " + name);
-                }
-                else
+//                if (impl.HasFormalArgs)
+//                {
+//                    arg = impl.TryGetFormalArgument(name);
+//                    if (arg == null)
+//                        throw new ArgumentException("no such attribute: " + name);
+//                }
+//                else
                 {
                     // define and make room in locals (a hack to make new Template("simple template") work.)
                     arg = impl.TryGetFormalArgument(name);

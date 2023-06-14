@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>The C# port of StringTemplate 4.</Description>
-    <Version>4.2.0</Version>
-    <FileVersion>4.2.0</FileVersion>
+    <Version>4.3.0</Version>
+    <FileVersion>4.3.0</FileVersion>
     <Title>StringTemplate 4</Title>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Ken Domino</Authors>
